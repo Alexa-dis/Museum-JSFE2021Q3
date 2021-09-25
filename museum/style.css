@@ -440,3 +440,62 @@ h1 {
     background-color: transparent;
     border: none;
 }
+
+
+.dark_section_galery{
+  padding-top: 75px;
+  background: #030303;
+}
+
+.picture-inner-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    column-width: 456px;
+    height: 1985px;
+    column-gap: 36px;
+    justify-content:flex-end;
+}
+
+.galery_item{
+    padding: 12px 0;
+}
+
+.galery_item_last{
+    padding-top: 12px;
+}
+
+.art_gallery_padding{
+    padding-bottom: 50px;
+}
+
+.picture-container{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+.contact_content{
+ display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contacts_text_container{
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  padding-bottom: 50px;
+}
+
+.contacts_list_item{
+  list-style-type: none;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  padding-bottom: 25px;
+}
+
+.contact_link{
+    color: #000000;
+    max-width: 1440px;
+  margin: 0 auto;
+}
