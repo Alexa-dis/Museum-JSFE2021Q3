@@ -46,6 +46,7 @@ span {
 .header_container {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 150px;
@@ -55,6 +56,7 @@ span {
 
 .logotype {
   background-image: url("assets/svg/logo.svg");
+  background-repeat: no-repeat;
   width: 49px;
   height: 26px;
 }
@@ -78,7 +80,6 @@ h1 {
   display: flex;
   color: white;
   list-style: none;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 780px;
@@ -90,11 +91,6 @@ h1 {
   font-weight: 200;
   font-size: 22px;
   letter-spacing: 2px;
-  margin-right: 50px;
-}
-
-.header_item:last-child {
-  margin-right: 0px;
 }
 
 .nav_link {
@@ -179,7 +175,7 @@ h1 {
   font-weight: 300;
   letter-spacing: 2px;
   padding-top: 25px;
-  padding-bottom: 75px;
+  padding-bottom: 100px;
 }
 
 .button_discover {
@@ -330,20 +326,20 @@ h4 {
 }
 
 .explore_section_pic_slider_container {
-  width: 720px;
+    width: 720px;
   height: 700px;
 }
 
 .explore_section_pic {
   display: flex;
   position: absolute;
-  top: 7px;
+  top: 15px;
 }
 
 .explore_slider {
   height: 701px;
   position: absolute;
-  top: 7px;
+  top: 15px;
   right: 260px;
 }
 
@@ -450,12 +446,15 @@ h4 {
   column-width: 456px;
   column-count: 3;
   height: 2997px;
-  width: 1440px;
-  column-gap: 36px;
+  max-width: 1440px;
+  column-gap: 35px;
   justify-content: center;
+  align-items: center;
   row-gap: 24px;
 }
-
+.galery_item{
+    width: 456px;
+}
 .art_gallery_padding {
   padding-bottom: 50px;
 }
@@ -463,9 +462,98 @@ h4 {
 .picture_container {
   height: 2035px;
   overflow-y: hidden;
+  max-width: 1440px;
 }
 
 /*конец галерея секции*/
+
+/*начало бай тикет секции*/
+
+h5 {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  color: #000000;
+}
+
+.ticket_section_container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ticket_text_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 660px;
+}
+
+.ticket_type {
+  width: 270px;
+}
+
+.ticket_amound {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.ticket_type_title{
+  padding-bottom: 50px;
+}
+
+.ticket_type_text{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  padding-bottom: 25px;
+}
+
+.ticket_amound_text{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    padding: 15px 0 9px 0;
+}
+
+input{
+    margin-right: 23px;
+}
+
+.bt_buy{
+    width: 175px;
+    height: 50px; 
+    background: #000000;
+    border-radius: 2px;
+    color: white;
+    border:0;
+}
+
+.bt_buy_text{
+    font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+
+.am_sp{
+    padding-bottom: 10px;
+}
+
+.tt_sp{
+    padding-top: 48px;
+    
+}
+
+/*конец бай тике секции*/
 
 /*начало параллакс секции*/
 
@@ -514,3 +602,127 @@ h4 {
 }
 
 /*конец контакты секции*/
+
+.footer_container{
+  max-width: 1440px;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav_link{
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 100;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.footer_nav{
+    display: flex;
+    flex-direction: row;
+    width: 705px;
+    justify-content: space-between;
+}
+
+.footer_socials{
+  width: 340px;
+  height: 128px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.soc_icon_conteiner{
+    width: 48px;
+    height: 48px;
+    border: 1px solid  #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.soc_icon_conteiner:hover{
+    width: 48px;
+    height: 48px;
+    border: 1px solid #9d8665;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.soc_icon{
+    padding-top: 2px;
+    width: 24px;
+    height: 24px;  
+}
+
+.footer_main{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo_footer{
+    width: 195px;
+}
+
+.logo_footer{
+    background-image: url("assets/svg/logo.svg");
+background-repeat: no-repeat;
+width: 195px;
+height: 26px;
+}
+
+.footer_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 107px;
+   height: 128px;
+}
+
+.footer_nav_links_cont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 363px;
+  height: 128px;
+}
+
+.dark_section_footer{
+  padding: 75px 0 50px 0;
+  background: #030303;
+  border-bottom: 3px solid #666666;
+}
+
+.dark_section_footer_footer{
+  background: #030303;
+}
+
+.footer_text{
+  font-style: normal;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 22px;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.footer_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 125px;
+}
+
+.ft_link{
+    color: white;
+}
