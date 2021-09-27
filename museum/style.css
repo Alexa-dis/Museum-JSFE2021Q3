@@ -11,6 +11,10 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+iframe{
+    border:0;
+}
+
 body {
   max-width: 1920px;
   margin: auto;
