@@ -730,3 +730,9 @@ height: 26px;
 .ft_link{
     color: white;
 }
+
+.vide_slider_pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
