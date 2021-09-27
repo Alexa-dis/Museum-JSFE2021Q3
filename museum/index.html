@@ -19,12 +19,12 @@
             </div>
             <nav class="header_navigation">       <!-- навигация в хэдере -->
               <ul class="header_list">
-                <li class="header_item"><a href="#visiting">Visiting</a></li>
-                <li class="header_item"><a href="#explore">Explore</a></li>
-                <li class="header_item"><a href="#video">Video</a></li>
-                <li class="header_item"><a href="#gallery">Gallery</a></li>
-                <li class="header_item"><a href="#tickets">Tickets</a></li>
-                <li class="header_item"><a href="#contacts">Contacts</a></li>
+                <li class="header_item"><a class="nav_link" href="#visiting">Visiting</a></li>
+                <li class="header_item"><a class="nav_link" href="#explore">Explore</a></li>
+                <li class="header_item"><a class="nav_link" href="#video">Video</a></li>
+                <li class="header_item"><a class="nav_link" href="#gallery">Gallery</a></li>
+                <li class="header_item"><a class="nav_link" href="#tickets">Tickets</a></li>
+                <li class="header_item"><a class="nav_link" href="#contacts">Contacts</a></li>
               </ul>
             </nav>  
         </div> 
@@ -33,14 +33,14 @@
 
 
   <main>
-    <section class="main_section">                 <!-- начало велком экрана -->
+    <section class="main_section">                 <!-- начало велком секции -->
       <div class="container_welcom">
         <div class="main_section_content">
           <h2 class="section_title_white 
                      welcom_title">Welcome <br>to the Louvre</h2>
           <p class="welcom_p">From the castle to the museum</p>
-          <button onclick="window.location.href = 'https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736';" 
-                  class="button_discover">Discover the Louvre</button>  
+          <a  href="tours/tour1.html" target="_blank" class="button_discover 
+             ">Discover the Louvre</a>  
         </div>
         <div class="slider">
             <div class="slider_content">
@@ -69,93 +69,101 @@
            
         </div>
       </div>
-    </section>                                     <!-- конец велком экрана -->
+    </section>                                     <!-- конец велком секции -->
 
 
 
-    <section class="light_section">                <!-- начало визит тур экрана -->
+    <section class="light_section">                <!-- начало визит тур эсекции -->
       <div class="container">
         <h2 id="visiting" 
             class="section_title_gold title_underline">Virtual tour</h2>
+
         <div class="virtual_tour_cards">
-           <div class="virtual_tour_card">
-             <div class="tour_card_pic">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/roual_palace.jpg" 
-                     alt="roual_palace" 
-                     class="tour_card_img">
-                <h3 class="tour_card_title">Royal Palace</h3>
-                <p class="tour_card_desc">360° Virtual Tour</p>
-                <a href="https://www.google.com/maps/@48.8606882,2.3356791,3a,90y,328.36h,87.55t/data=!3m7!1e1!3m5!1sAF1QipMZ9YgnArbwEIbTDANeSQYFu9gNqpW_2Sv8FBvY!2e10!3e12!7i4352!8i1815" 
-                   class="tour_cars_link">Google Street Panorama View</a>
-             </div>
+           <div class="virtual_tour_card">          <!-- карточка 1 -->
+              <a href="tours/tour2.html" target="_blank" class="tour_cars_link">
+                <div class="tour_card_pic">
+                    <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/roual_palace.jpg" 
+                         alt="roual_palace" 
+                         class="tour_card_img">
+                    <h3 class="tour_card_title">Royal Palace</h3>
+                    <h4>360° Virtual Tour</h4>
+                    <p class="tour_cars_desc">Google Street Panorama View</p>
+                </div>
+              </a> 
+           </div>
+                          
+           <div class="virtual_tour_card">         <!-- карточка 2 -->
+              <a href="tours/tour3.html" target="_blank" class="tour_cars_link">
+                <div class="tour_card_pic">
+                    <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/Denon_Wing.jpg" 
+                         alt="Denon_Wing" 
+                         class="tour_card_img">
+                    <h3 class="tour_card_title">Denon Wing</h3>
+                    <h4>360° Virtual Tour</h4>
+                    <p class="tour_cars_desc">Google Street Panorama View</p>
+                 </div>
+               </a>  
+            </div>           
+
+           <div class="virtual_tour_card">       <!-- карточка 3 -->
+               <a href="tours/tour4.html" target="_blank" class="tour_cars_link">
+                 <div class="tour_card_pic">
+                    <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/Colonnade_Perrault.jpg" 
+                         alt="Colonnade_Perrault" 
+                         class="tour_card_img">
+                    <h3 class="tour_card_title">Colonnade Perrault</h3>
+                    <h4>360° Virtual Tour</h4>
+                    <p class="tour_cars_desc">Google Street Panorama View</p>
+                 </div>
+               </a>
            </div>
 
-           <div class="virtual_tour_card">
-             <div class="tour_card_pic">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/Denon_Wing.jpg" 
-                     alt="Denon_Wing" 
-                     class="tour_card_img">
-                <h3 class="tour_card_title">Denon Wing</h3>
-                <p class="tour_card_desc">360° Virtual Tour</p>
-                <a href="https://www.google.com/maps/@48.8563254,2.3352706,3a,75y,90t/data=!3m7!1e1!3m5!1sAF1QipNRj_CwP4coDMYdCHj6qHeBeJpI2VxU5BUsOX4F!2e10!3e12!7i11000!8i5500" 
-                   class="tour_cars_link">Google Street Panorama View</a>
-             </div>
+           <div class="virtual_tour_card">      <!-- карточка 4 -->
+             <a href="tours/tour5.html" target="_blank" class="tour_cars_link">
+                <div class="tour_card_pic">
+                    <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/Greek_hall.jpg" 
+                         alt="Greek_hall" 
+                         class="tour_card_img">
+                    <h3 class="tour_card_title">Greek Hall</h3>
+                    <h4>360° Virtual Tour</h4>
+                    <p class="tour_cars_desc">Google Street Panorama View</p>
+                 </div>
+             </a>  
            </div>
 
-           <div class="virtual_tour_card">
-             <div class="tour_card_pic">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/Colonnade_Perrault.jpg" 
-                     alt="Colonnade_Perrault" 
-                     class="tour_card_img">
-                <h3 class="tour_card_title">Colonnade Perrault</h3>
-                <p class="tour_card_desc">360° Virtual Tour</p>
-                <a href="https://www.google.com/maps/@48.8601723,2.3395439,3a,88.4y,322.04h,84.25t/data=!3m7!1e1!3m5!1sAF1QipNMZGQuEA-pAUvIG_eP_2f3gWTKZEJ6XLVJ-Pgb!2e10!3e12!7i10240!8i5120" 
-                   class="tour_cars_link">Google Street Panorama View</a>
-             </div>
+           <div class="virtual_tour_card">      <!-- карточка 5 -->
+               <a href="tours/tour6.html" target="_blank" class="tour_cars_link">
+                <div class="tour_card_pic">
+                    <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/Mona_Lisa.jpg" 
+                         alt="Mona_Lisa" 
+                         class="tour_card_img">
+                    <h3 class="tour_card_title">Mona Lisa</h3>
+                    <h4>360° Virtual Tour</h4>
+                    <p class="tour_cars_desc">Google Street Panorama View</p>
+                 </div>   
+               </a>  
            </div>
 
-           <div class="virtual_tour_card">
-             <div class="tour_card_pic">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/Greek_hall.jpg" 
-                     alt="Greek_hall" 
-                     class="tour_card_img">
-                <h3 class="tour_card_title">Greek Hall</h3>
-                <p class="tour_card_desc">360° Virtual Tour</p>
-                <a href="https://www.google.com/maps/@48.860183,2.3356156,3a,90y,177.69h,95.61t/data=!3m7!1e1!3m5!1sAF1QipP7uFZnTITRe-7AEVAgHAfqiCL-03gvBHcYWgF3!2e10!3e12!7i5472!8i2736" 
-                   class="tour_cars_link">Google Street Panorama View</a>
-             </div>
-           </div>
-
-           <div class="virtual_tour_card">
-            <div class="tour_card_pic">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/Mona_Lisa.jpg" 
-                     alt="Mona_Lisa" 
-                     class="tour_card_img">
-                <h3 class="tour_card_title">Mona Lisa</h3>
-                <p class="tour_card_desc">360° Virtual Tour</p>
-                <a href="https://www.google.com/maps/@48.8598788,2.3355157,3a,82.2y,7.53h,94t/data=!3m7!1e1!3m5!1sAF1QipO1wkUUbyzpPjj-OR0mR5etZJT-xl-40XK8rDQ3!2e10!3e12!7i10240!8i5120" 
-                   class="tour_cars_link">Google Street Panorama View</a>
-             </div>  
-           </div>
-
-           <div class="virtual_tour_card">
-            <div class="tour_card_pic">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/Night_Palace.jpg" 
-                     alt="Night_Palace" 
-                     class="tour_card_img">
-                <h3 class="tour_card_title">Night Palace</h3>
-                <p class="tour_card_desc">360° Virtual Tour</p>
-                <a href="https://www.google.com/maps/@48.8563254,2.3352706,3a,90y,21.26h,79.91t/data=!3m7!1e1!3m5!1sAF1QipPpGAowYatVyk3MMGnZAaQkYm2EUk-Dlca06SS5!2e10!3e12!7i11304!8i5652" 
-                   class="tour_cars_link">Google Street Panorama View</a>
-             </div> 
+           <div class="virtual_tour_card">     <!-- карточка 6 -->
+             <a href="tours/tour7.html" target="_blank" class="tour_cars_link">
+                <div class="tour_card_pic">
+                    <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/Night_Palace.jpg" 
+                         alt="Night_Palace" 
+                         class="tour_card_img">
+                    <h3 class="tour_card_title">Night Palace</h3>
+                    <h4>360° Virtual Tour</h4>
+                    <p class="tour_cars_desc">Google Street Panorama View</p>
+                 </div> 
+             </a>
            </div> 
+
         </div>
       </div> 
-    </section>                                     <!-- конец визит тур экрана -->
+    </section>                                     <!-- конец визит тур эсекции -->
 
 
 
-    <section class="dark_section">
+    <section class="dark_section">                 <!-- начало эксплор секции -->
       <div class="container_explore">
         <div class="explore_section_text">
             <h2 id="explore"
@@ -174,9 +182,9 @@
         </div>
         
       </div>
-    </section>
+    </section>                                     <!-- конец эксплор секции -->
 
-    <section class="light_section">
+    <section class="light_section">                <!-- начало видео секции -->
       <div class="container_video_section">
           <div class="video_text_container">
             <div class="video_title_container">
@@ -220,30 +228,33 @@
           </div>
         
       </div>
-    </section>
+    </section>                                     <!-- конец видео секции -->
 
-    <section class="dark_section_galery">
+    <section class="dark_section_galery">          <!-- начало галерея секции -->
       <div class="container">
         <h2 id="gallery" 
-            class="section_title_white art_gallery_padding">Art Gallery</h2>
-        <div class="picture-container">
-            <div class="picture-inner-container">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery2 1.jpg" alt="" class="galery_item">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery9 1.jpg" alt="" class="galery_item">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery4 1.jpg" alt="" class="galery_item">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery6 1.jpg" alt="" class="galery_item_last">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery1 1.jpg" alt="" class="galery_item">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery8 1.jpg" alt="" class="galery_item">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery3 1.jpg" alt="" class="galery_item">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery5 1.jpg" alt="" class="galery_item_last">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery7 1.jpg" alt="" class="galery_item">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery10 1.jpg" alt="" class="galery_item">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery15 1.jpg" alt="" class="galery_item">
-                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery12 1.jpg" alt="" class="galery_item_last">
+            class="section_title_white">Art Gallery</h2>
+        <div class="picture_container">
+            <div class="picture_inner_container">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery2.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery9.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery4.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery6.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery13.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery1.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery8.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery3.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery5.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery11.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery7.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery10.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery15.jpg" alt="" class="galery_item"> 
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery12.jpg" alt="" class="galery_item">
+                <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/galery/galery14.jpg" alt="" class="galery_item">    
             </div>
         </div>
       </div>
-    </section>
+    </section>                                     <!-- конец галерея секции -->
 
     <section class="light_section">
       <div class="container">
@@ -253,7 +264,7 @@
     </section>
 
     <section class="parallax_section">
-      <img src="/alexa-dis-JSFE2021Q3/museum/assets/img/parallax 1.jpg" alt="parallax">
+      <div class="parallax_content"></div>
     </section>
 
     <section class="light_section">
