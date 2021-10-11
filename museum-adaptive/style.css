@@ -148,7 +148,7 @@ h1 {
   font-size: 22px;
   color: #ffffff;
   line-height: 38px;
-  width: 652px;
+  width: 100%;
 }
 
 .body_font_bl {
@@ -165,12 +165,14 @@ h1 {
 .container_welcom {
   max-width: 1440px;
   margin: 0 auto;
-  height: 842px;
-  background-image: url("assets/img/main_img.jpg");
-  background-repeat: no-repeat;
-  background-position: right top;
-  position: relative;
   height: 810px;
+  position: relative;
+}
+
+.main_section_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .welcom_title {
@@ -207,26 +209,74 @@ h1 {
   color: white;
 }
 
+.main_section_text_container {
+  position: absolute;
+  z-index: 3;
+}
+
 /*начало слайдера в заголовке */
 
+.slider_container {
+  width: 69, 4444%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
 .slider {
-  width: 600px;
+  width: 60%;
   height: 120px;
   background: #000000;
   display: flex;
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 1;
+}
+
+.slider_imgs_gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 25%
+  );
+  z-index: 1;
+}
+
+.img {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  animation: 0.5s ease-in-out;
+}
+
+.active,
+.next {
+  display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .slider_content {
-  width: 450px;
+  width: 60%;
   height: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+  padding: 0 7%;
 }
 
 .slider_text {
@@ -245,25 +295,26 @@ h1 {
   width: 180px;
 }
 
-.slider_sq_active {
+.sq.active {
   height: 16px;
   width: 16px;
   background-color: #d2b183;
 }
 
-.slider_sq_active:hover {
+.sq.active:hover {
   height: 16px;
   width: 16px;
   background-color: #9d8665;
 }
 
-.slider_sq {
+.sq {
   height: 16px;
   width: 16px;
   background-color: white;
+  cursor: pointer;
 }
 
-.slider_sq:hover {
+.sq:hover {
   height: 16px;
   width: 16px;
   background-color: #9d8665;
@@ -283,6 +334,42 @@ h1 {
   cursor: pointer;
 }
 
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
 /*конец слайдера в заголовке */
 
 /*конец главной секции */
@@ -294,11 +381,12 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 60px;
   grid-row-gap: 75px;
+  width: 100%;
 }
 
 .virtual_tour_card {
-  width: 440px;
-  height: 424px;
+  width: 100%;
+  max-height: 424px;
 }
 
 .tour_card_title {
@@ -319,13 +407,13 @@ h4 {
   line-height: 26px;
   padding: 10px 0;
   border-top: 2px solid #710707;
-  width: 300px;
+  width: 60%;
   transition: width 0.3s ease-in-out;
 }
 
 .virtual_tour_card :hover h4 {
   border-top: 2px solid #710707;
-  width: 440px;
+  width: 100%;
   transition: width 0.3s ease-in-out;
 }
 
@@ -340,6 +428,10 @@ h4 {
   color: #000000;
 }
 
+.tour_card_img {
+  width: 100%;
+}
+
 /*конец тур секции*/
 
 /*начало эксплор секции*/
@@ -352,7 +444,7 @@ h4 {
 }
 
 .explore_section_text {
-  width: 660px;
+  width: 50%;
 }
 
 .spacer {
@@ -369,28 +461,32 @@ h4 {
   height: 715px;
 }
 
-.explore_section_pic_slider_container {
-  width: 720px;
-  height: 700px;
+.img-comp-container {
+  width: 50%;
+  height: auto;
   position: relative;
 }
 
-.explore_section_comp_img img {
+.img-comp-img img {
   display: block;
   vertical-align: middle;
 }
 
-.explore_section_comp_img {
+.img-comp-img {
   position: absolute;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
-.explore_slider {
+.img-comp-slider {
   position: absolute;
   z-index: 9;
   cursor: ew-resize;
+  width: 40px;
+  height: 700px;
+  background-image: url(assets/svg/explore_slider.svg);
+  top: 0;
 }
 
 /*конец эксплор секции*/
@@ -436,6 +532,7 @@ h4 {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  width: 100%;
 }
 
 .video_controls_container {
@@ -448,6 +545,7 @@ h4 {
   position: relative;
   top: 650px;
   padding: 0 30px;
+  width: 100%;
 }
 
 .videos_container {
@@ -571,8 +669,8 @@ h4 {
   flex-direction: column;
   column-width: 456px;
   column-count: 3;
-  height: 2997px;
-  max-width: 1440px;
+  height: 2900px;
+  width: 100%;
   column-gap: 35px;
   justify-content: flex-start;
   align-items: center;
@@ -599,13 +697,13 @@ h4 {
 }
 
 .galery_item {
-  width: 456px;
+  width: 31.65%;
 }
 
 .picture_container {
   height: 2035px;
   overflow-y: hidden;
-  max-width: 1440px;
+  width: 100%;
   position: relative;
 }
 
@@ -640,6 +738,7 @@ h5 {
   display: flex;
   flex-direction: row;
   width: 660px;
+  justify-content: space-between;
 }
 
 .ticket_type {
@@ -1098,7 +1197,7 @@ input {
     width: 160px;
   }
 
-  .slider_sq_active {
+  .slider_sq.active {
     height: 12px;
     width: 12px;
     background-color: #d2b183;
@@ -1241,18 +1340,18 @@ input {
     height: 1027px;
   }
 
-  .explore_section_pic_slider_container {
+  .img-comp-container {
     width: 720px;
     height: 700px;
     margin: 62px auto;
   }
 
-  .explore_section_comp_img img {
+  .img-comp-img img {
     display: block;
     vertical-align: middle;
   }
 
-  .explore_section_comp_img {
+  .img-comp-img {
     position: absolute;
     width: auto;
     height: auto;
@@ -2119,19 +2218,19 @@ input {
     height: 828px;
   }
 
-  .explore_section_pic_slider_container {
+  .img-comp-container {
     width: 728px;
     height: 705px;
     position: relative;
     bottom: 80px;
   }
 
-  .explore_section_comp_img img {
+  .img-comp-img img {
     display: block;
     vertical-align: middle;
   }
 
-  .explore_section_comp_img {
+  .img-comp-img {
     position: absolute;
     width: auto;
     height: auto;
@@ -2811,7 +2910,7 @@ input {
     height: 544px;
     background-image: url("assets/img/main_img_mob.jpg");
     background-repeat: no-repeat;
-    
+
     background-size: 380px 365px;
   }
 
@@ -3036,21 +3135,21 @@ input {
     height: 471px;
   }
 
-  .explore_section_pic_slider_container {
+  .img-comp-container {
     width: 380px;
     height: 368px;
     position: relative;
     bottom: 80px;
   }
 
-  .explore_section_comp_img img {
+  .img-comp-img img {
     display: block;
     vertical-align: middle;
     width: 380px;
     height: 368px;
   }
 
-  .explore_section_comp_img {
+  .img-comp-img {
     position: absolute;
     width: auto;
     height: auto;
@@ -3228,7 +3327,6 @@ input {
     width: 50px;
     height: 50px;
     position: relative;
-    
   }
 
   .min_play_icon {
@@ -3493,7 +3591,6 @@ input {
     padding-bottom: 40px;
     width: 185px;
     padding-top: 20px;
-    
   }
 
   .contacts_list_item {
